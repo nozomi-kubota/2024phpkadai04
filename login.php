@@ -9,27 +9,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
 
-    <nav class="navbar">
+
+<header>
+    <nav>
         <a href="index.php">データ登録</a>
         <span>ログイン</span>
     </nav>
+</header>
 
-    <div class="container">
-        <h1>ログイン</h1>
+<body>
+    <main>
         <form name="form1" action="login_act.php" method="post">
-            <div class="form-group">
-                <label for="lid">ID</label>
-                <input type="text" id="lid" name="lid" required placeholder="ユーザーID">
-            </div>
-            <div class="form-group">
-                <label for="lpw">パスワード</label>
-                <input type="password" id="lpw" name="lpw" required placeholder="パスワード">
-            </div>
-            <input type="submit" value="ログイン">
+
+            <div class="container">
+                <h1 class="h1">ログイン</h1>
+                <div class="form-group">
+                    <label for="lid">ID</label>
+                    <input type="text" id="lid" name="lid" required placeholder="ユーザーID">
+                </div>
+                <div class="form-group">
+                    <label for="lpw">パスワード</label>
+                    <input type="password" id="lpw" name="lpw" required placeholder="パスワード">
+                </div>
+                <input type="submit" value="ログイン">
         </form>
-    </div>
+        </div>
+    </main>
 
 </body>
 

@@ -38,4 +38,6 @@ if ($val['id'] != ''  && password_verify($lpw, $val['lpw'])) {
     header('Location: login.php');
     //redirect('login.php');
 }
+
 exit();
+?>
