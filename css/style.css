@@ -11,20 +11,42 @@
 
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
+  line-height: 1.2;
   background-color: var(--background-color);
-  margin-top: 5px;
-  padding: 5px;
+  color: var(--text-color);
+  margin-top: 2px;
   display: flex;
+  padding: 5px;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
   background-color: var(--secondary-color);
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  padding: 2px;
+  margin-top: auto;
+  text-align: center;
+  font-size: 30px;
+  color: #090425;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 1px #402c86;
+  /* background: radial-gradient(#20aad8, #402c86); */
+  border-radius: 10px;
+  box-shadow: 2 5px 8px rgba(0, 0, 100, 0.9);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /*要素を左右に配置 */
+  align-items: center;
+  /*リンクを垂直方向に中央揃え */
 }
 
 nav a {
@@ -45,16 +67,35 @@ main {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+
+.logout-form {
+  display: flex;
+  align-items: center;
+  /* 追加: フォーム内の要素を垂直方向に中央揃え */
+  margin: 0;
+  /* 修正: マージンをリセット */
+  background-color: transparent;
+  width: auto;
+  padding: 0;
+}
+
+.logout-button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
 }
 
 form {
   background-color: var(--input-background);
   padding: 2.5rem;
   border-radius: 12px;
+  /*角を丸める*/
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -76,9 +117,131 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  font-size: 20px;
+  color: #090425;
+  font-weight: bolder;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+
+/* .container {
+  background-color: var(--input-background);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}  */
+
+/* h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+} */
+/* 
+.form-group {
+  margin-bottom: 1.5rem;
+} */
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.1rem;
+  font-size: 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  /*外側の角を丸める*/
+  transition: all 0.3s ease;
+  background-color: var(--input-background);
+  box-sizing: border-box;
+  /* transition: border-color 0.3s ease, box-shadow 0.3s ease; */
+  word-wrap: break-word;
+  /* URLが長い場合に折り返す */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+}
+
+/* 
+.navbar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+} */
+
+fieldset {
+  border: none;
+  padding: 10;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 3%;
+  ;
+  font-weight: 500;
   color: var(--text-color);
 }
 
+/* 
 input[type="text"],
 input[type="url"],
 textarea {
@@ -92,7 +255,7 @@ textarea {
 }
 
 input[type="text"]:focus,
-input[type="email"]:focus,
+input[type="email"]:focus, */
 textarea:focus {
   outline: none;
   border-color: var(--input-focus);
@@ -126,21 +289,16 @@ input[type="submit"]:active {
   }
 }
 
-.container {
-  max-width: 1200px;
-  margin: 5% 0;
-}
 
 
 
 /* テーブル全体のスタイル */
 table {
   border-collapse: collapse;
-  line-height: 150%;
-  margin: 5px 0;
+  margin: 25px 0;
   font-size: 1em;
   font-family: 'Arial', sans-serif;
-  min-width:600px;
+  min-width: 400px;
   border: 1px solid #ddd;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -150,7 +308,7 @@ table th {
   background-color: #f4f4f4;
   color: #333;
   text-align: left;
-  padding: 20px;
+  padding: 12px;
   border-bottom: 2px solid #ddd;
 }
 
@@ -159,7 +317,6 @@ table td {
   padding: 12px;
   border-bottom: 1px solid #ddd;
   word-wrap: break-word;
-  line-height: 150%;
   /* URLが長い場合に折り返す */
 }
 
