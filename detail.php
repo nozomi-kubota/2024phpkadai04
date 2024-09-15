@@ -27,24 +27,23 @@ if ($status == false) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登録内容編集</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-
-<nav class="navbar">
+<body id="main">
     <header>
-        <!-- <nav> -->
-        <a href="index.php">データ登録画面へ</a>
-        <!-- </nav> -->
+        <nav class="navbar">
+            <a href="index.php">データ登録画面へ</a>
+        </nav>
     </header>
-</nav>
+    </nav>
 
-
-<body>
+<!-- <body> -->
 <div class="container">
-    <header>
+    <!-- <header> -->
         <h1>登録内容の編集</h1>
-    </header>
+    <!-- </header> -->
     <main>
         <div>
             <form method="post" action="update.php">
